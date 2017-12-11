@@ -34,7 +34,12 @@ describe('Monkey testing with gremlins ', function () {
   
   it('it should not raise any error', function () {
     browser.url('/');
-	browser.executeAsync(unleashGremlins, 60000);
+    
+    browser.timeoutsAsyncScript(60000);
+    browser.executeAsync(loadScript);
+   
+    browser.timeoutsAsyncScript(60000);
+    browser.executeAsync(unleashGremlins, 50000);
   });
 
   afterAll(function() {
