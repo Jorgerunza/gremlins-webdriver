@@ -14,14 +14,7 @@ function unleashGremlins(ttl, callback) {
         horde.stop();
         callback();
     }
-    var horde = window.gremlins.createHorde()
-  .gremlin(gremlins.species.formFiller())
-  .gremlin(gremlins.species.clicker().clickTypes(['click']))
-  .gremlin(gremlins.species.toucher())
-  .gremlin(gremlins.species.scroller())
-  .gremlin(function() {
-    window.$ = function() {};
-  });
+    var horde = window.gremlins.createHorde();
     horde.seed(1234);
 
     horde.after(callback);
