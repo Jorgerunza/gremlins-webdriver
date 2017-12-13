@@ -119,7 +119,12 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    reporters: ['spec'],
+    reporters: ['spec', 'junit'],
+	reporterOptions: {
+		junit: {
+			outputDir: './'
+		}
+	},
     
     //
     // Options to be passed to Jasmine.
