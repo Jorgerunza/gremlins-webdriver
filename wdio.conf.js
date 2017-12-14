@@ -121,7 +121,7 @@ exports.config = {
     // see also: http://webdriver.io/guide/testrunner/reporters.html
     reporters: ['spec', 'json'],
 	reporterOptions: {
-		outputDir: './'
+		outputDir: './report'
 	},
     
     //
